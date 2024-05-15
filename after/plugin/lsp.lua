@@ -14,7 +14,6 @@ require('mason-lspconfig').setup({
 	'tsserver',
 	'eslint',
 	'jdtls',
-	'cpptools',
 	'pylsp',
   },
   
