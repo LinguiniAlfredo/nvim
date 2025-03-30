@@ -1,7 +1,7 @@
 
 let mapleader=" "
 
-set guifont='JetBrainsMono-Light'
+set guifont='Liberation'
 
 set laststatus=2
 set noshowmode
@@ -21,20 +21,21 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'itchyny/lightline.vim'
-Plug 'sho-87/kanagawa-paper.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
+Plug 'thesimonho/kanagawa-paper.nvim'
 
 call plug#end()
 
-
-colorscheme kanagawa-paper
+colorscheme kanagawa-paper-ink
 let g:lightline = { 'colorscheme': 'seoul256' }
-
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope git_files<cr>
 nnoremap <leader>gg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fp <cmd>colorscheme kanagawa-paper-ink<cr>
+nnoremap <leader>f; <cmd>colorscheme kanagawa-paper-canvas<cr>
 
